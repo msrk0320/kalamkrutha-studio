@@ -20,3 +20,6 @@ import { cleanup } from "@testing-library/react";
 import { afterEach } from "vitest";
 
 afterEach(() => cleanup());
+
+// "server-only" throws outside the React Server bundle; tests import server modules directly.
+vi.mock("server-only", () => ({}));
