@@ -7,9 +7,5 @@ export default function HomePage({ params }: { params: Promise<{ locale: Locale 
   const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations("Hero");
-  return (
-    <main>
-      <h1>{t("title")}</h1>
-    </main>
-  );
+  return <h1 className="pt-32">{t("title")}</h1>;
 }

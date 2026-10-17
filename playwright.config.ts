@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 // Browsers live in C:\Tools\Playwright (see `npm run e2e:install`).
-process.env.PLAYWRIGHT_BROWSERS_PATH ??= "C:\Tools\Playwright";
+process.env.PLAYWRIGHT_BROWSERS_PATH ??= "C:/Tools/Playwright";
 
 const PORT = 3100;
 
