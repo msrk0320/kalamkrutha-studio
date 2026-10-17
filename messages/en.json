@@ -1,0 +1,333 @@
+{
+  "Meta": {
+    "siteName": "Kalamkrutha Digital Studio",
+    "home": {
+      "title": "Wedding Photography & Films in Guntur | Kalamkrutha",
+      "description": "Kalamkrutha Digital Studio, Guntur: wedding, candid and pre-wedding photography, traditional and cinematic videography, albums and passport photos since 2016."
+    },
+    "stories": {
+      "title": "Wedding Stories & Albums | Kalamkrutha Digital Studio",
+      "description": "Browse wedding stories by Kalamkrutha Digital Studio, Guntur: Telugu Hindu weddings, church weddings and pre-wedding shoots presented as album spreads."
+    },
+    "story": {
+      "title": "{a} & {b} – Wedding Story | Kalamkrutha Digital Studio",
+      "description": "{a} & {b}: a {kind} photographed by Kalamkrutha Digital Studio in {place}. Rituals, portraits and candid moments laid out as a wedding album you can browse."
+    },
+    "services": {
+      "title": "Photography & Video Services, Prices | Kalamkrutha Guntur",
+      "description": "Wedding, candid, pre-wedding and post-wedding photography, traditional and cinematic video, albums, functions and passport photos in Guntur, with prices."
+    },
+    "about": {
+      "title": "About Our Studio in Sitaram Nagar, Guntur | Kalamkrutha",
+      "description": "Kalamkrutha Digital Studio has photographed weddings and family functions in Guntur since 2016. Visit us opposite Bharath Gas, Sitaram Nagar, 9 am to 9 pm."
+    },
+    "contact": {
+      "title": "Contact & Book a Shoot in Guntur | Kalamkrutha Digital Studio",
+      "description": "Book wedding photography or video in Guntur. WhatsApp or call +91 88858 58111, email kalamkrutha@gmail.com, or send your event details through our form."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Kalamkrutha Digital Studio, Guntur, AP",
+      "description": "How Kalamkrutha Digital Studio collects, uses and protects the details you share through our website enquiry form, WhatsApp, phone and email in Guntur."
+    },
+    "terms": {
+      "title": "Terms & Conditions | Kalamkrutha Digital Studio, Guntur",
+      "description": "Terms for using the Kalamkrutha Digital Studio website and booking photography, videography, album and walk-in studio services with us in Guntur, Andhra."
+    },
+    "cookies": {
+      "title": "Cookie Policy | Kalamkrutha Digital Studio, Guntur, India",
+      "description": "Which cookies and similar storage the Kalamkrutha Digital Studio website uses, why we use them, and how you can accept, refuse or clear them at any time."
+    },
+    "notFound": {
+      "title": "Page not found | Kalamkrutha Digital Studio",
+      "description": "The page you were looking for could not be found."
+    },
+    "ogAlt": "Kalamkrutha Digital Studio – wedding photography and films in Guntur"
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "whatsappUs": "WhatsApp us",
+    "callUs": "Call us",
+    "emailUs": "Email us",
+    "seeStories": "See our stories",
+    "viewStory": "View this story",
+    "allServices": "All services",
+    "askOnWhatsapp": "Ask on WhatsApp",
+    "from": "from {price}",
+    "openInMaps": "Open in Google Maps",
+    "sinceYear": "Since 2016",
+    "location": "Guntur, Andhra Pradesh",
+    "sampleNotice": "Sample story: placeholder photos and names, to be replaced with the studio’s real work.",
+    "backHome": "Back to home",
+    "whatsappMessage": "Hi Kalamkrutha Digital Studio, I would like to know about your photography and video packages."
+  },
+  "Nav": {
+    "home": "Home",
+    "stories": "Stories",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "language": "Language",
+    "primary": "Main navigation",
+    "mainSite": "Kalamkrutha Digital Studio, home"
+  },
+  "Hero": {
+    "eyebrow": "Guntur · Since 2016",
+    "title": "Life Time Memories",
+    "subtitle": "Wedding photography and films, candid moments and family functions — photographed, edited and made into albums by our studio in Guntur.",
+    "slidesLabel": "Featured photographs",
+    "goToSlide": "Show photograph {n}",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow"
+  },
+  "Home": {
+    "storiesEyebrow": "Album",
+    "storiesTitle": "Every wedding, told like an album",
+    "storiesIntro": "Rituals, portraits and the moments in between, laid out page by page the way you will keep them.",
+    "servicesEyebrow": "What we shoot",
+    "servicesTitle": "All types of photography, one studio",
+    "servicesIntro": "We shoot all types of functions — from the wedding mandapam to a half-saree ceremony at home.",
+    "aboutEyebrow": "The studio",
+    "aboutTitle": "A neighbourhood studio in Sitaram Nagar",
+    "aboutBody": "Kalamkrutha Digital Studio has photographed weddings and family functions across Guntur since 2016. We cover the day with photo and video, edit everything in-house and design the album you take home.",
+    "aboutLink": "About the studio",
+    "ctaEyebrow": "Book your date",
+    "ctaTitle": "Tell us about your function",
+    "ctaBody": "Send the date, place and what you need. We usually reply on WhatsApp the same day.",
+    "ctaForm": "Send an enquiry"
+  },
+  "Stories": {
+    "eyebrow": "Stories",
+    "title": "Wedding stories",
+    "intro": "A few weddings and shoots, presented the way an album would hold them.",
+    "kinds": {
+      "teluguWedding": "Telugu Hindu wedding",
+      "churchWedding": "Church wedding",
+      "preWedding": "Pre-wedding shoot"
+    },
+    "dates": {
+      "teluguWedding": "Sample · February",
+      "churchWedding": "Sample · December",
+      "preWedding": "Sample · January"
+    },
+    "albumLabel": "Album photographs",
+    "previous": "Previous photograph",
+    "next": "Next photograph",
+    "slideOf": "{n} of {total}",
+    "thumbnails": "Choose a photograph",
+    "moreStories": "More stories",
+    "ctaTitle": "Planning your own?",
+    "ctaBody": "Tell us your date and we will share what we can cover."
+  },
+  "Services": {
+    "eyebrow": "Services",
+    "title": "Photography and video for every function",
+    "intro": "Weddings, pre- and post-wedding shoots, engagements, birthdays, half-saree ceremonies and more. Prices below are starting points; send your details for an exact quote.",
+    "includes": "What’s included",
+    "functionsNote": "We shoot all types of functions.",
+    "priceFrom": "Starting price",
+    "items": {
+      "wedding-photography": {
+        "title": "Wedding Photography",
+        "summary": "Complete coverage of the wedding day, from the pellikuthuru and mandapam rituals to family portraits.",
+        "includes": ["Rituals and ceremony coverage", "Couple and family portraits", "Edited high-resolution photos", "Album design and printing on request"]
+      },
+      "traditional-videography": {
+        "title": "Traditional Videography",
+        "summary": "A full-function video that records the whole ceremony, ritual by ritual, for the family to keep.",
+        "includes": ["Full ceremony recorded start to finish", "Multiple camera angles where needed", "Video editing with titles and music", "Delivered on pen drive or download"]
+      },
+      "candid-photography": {
+        "title": "Candid Photography",
+        "summary": "Unposed moments — laughter, tears and glances — caught as they happen alongside the traditional coverage.",
+        "includes": ["Dedicated candid photographer", "Natural colour editing", "Best moments selected for the album"]
+      },
+      "cinematic-videography": {
+        "title": "Cinematic Videography",
+        "summary": "A film-style highlight of your day with music, plus a 3–5 minute candid highlight video of the whole event.",
+        "includes": ["3–5 minute highlight film", "Cinematic camera work", "Colour grading and sound design", "Short clips for Instagram and WhatsApp"]
+      },
+      "pre-wedding": {
+        "title": "Pre-Wedding Photography",
+        "summary": "An outdoor shoot before the wedding at a location you choose — riverside, fort, fields or city streets.",
+        "includes": ["Location suggestions around Guntur", "Outfit and pose guidance", "Edited photos for invitations and social media"]
+      },
+      "post-wedding": {
+        "title": "Post-Wedding Photography",
+        "summary": "A relaxed shoot after the wedding, once the rush is over and you can enjoy the camera together.",
+        "includes": ["Relaxed couple session", "Indoor or outdoor location", "Edited high-resolution photos"]
+      },
+      "functions": {
+        "title": "Functions & Events",
+        "summary": "Engagements, birthdays, half-saree ceremonies, naming ceremonies, newborn shoots and family events.",
+        "includes": ["Engagement from ₹12,000", "Birthday from ₹10,000", "Half-saree, naming and newborn shoots", "Photo and video coverage"]
+      },
+      "album-design": {
+        "title": "Album Design & Video Editing",
+        "summary": "We design, print and bind your wedding album and edit your videos in our own studio.",
+        "includes": ["Custom album layout", "Premium printed albums", "Video editing for full-function and highlight videos"]
+      }
+    }
+  },
+  "WalkIn": {
+    "eyebrow": "Walk-in studio",
+    "title": "Passport photos and studio sittings",
+    "intro": "Walk in any day, 9 am to 9 pm. Rates as displayed at the studio.",
+    "extras": "Also available: urgent passport photos, photostat and colour xerox.",
+    "items": {
+      "passport": { "title": "Passport-size photos", "detail": "8 copies" },
+      "passport-extra": { "title": "Additional passport photos", "detail": "8 more copies" },
+      "studio-sitting": { "title": "Studio sitting", "detail": "2 copies, with background change" },
+      "matching-photos": { "title": "Matching photos", "detail": "2 copies, 6×4 maxi, with background change" },
+      "digital-transfer": { "title": "WhatsApp & email transfer", "detail": "Extra, per order" }
+    },
+    "service": "Service",
+    "price": "Price"
+  },
+  "About": {
+    "eyebrow": "About",
+    "title": "Kalamkrutha Digital Studio",
+    "intro": "A photo and video studio in Sitaram Nagar, Guntur, photographing weddings and family functions since 2016.",
+    "storyTitle": "What we do",
+    "storyBody": [
+      "We cover weddings and functions with both photo and video: traditional coverage that records every ritual, candid photography for the unposed moments, and cinematic highlight films.",
+      "Everything is edited in our own studio, where we also design and make your wedding album.",
+      "On the walk-in side, the studio is open every day for passport photos, studio sittings, photostat and colour xerox."
+    ],
+    "visitTitle": "Visit the studio",
+    "hoursTitle": "Opening hours",
+    "hours": "Monday to Sunday, 9:00 am – 9:00 pm",
+    "paymentsTitle": "Payments",
+    "payments": "UPI and Paytm accepted at the counter"
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Book a shoot or ask a question",
+    "intro": "The quickest way to reach us is WhatsApp. You can also call, email, visit the studio or send the form below.",
+    "detailsTitle": "Studio details",
+    "phone": "Phone & WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Hours",
+    "formTitle": "Send an enquiry",
+    "mapTitle": "Map showing Kalamkrutha Digital Studio, Sitaram Nagar, Guntur"
+  },
+  "Form": {
+    "name": "Your name",
+    "phone": "Phone number",
+    "email": "Email (optional)",
+    "service": "What do you need?",
+    "servicePlaceholder": "Choose a service",
+    "other": "Something else",
+    "eventDate": "Event date (optional)",
+    "message": "Tell us about your function",
+    "messageHint": "Date, place, number of days and anything else we should know.",
+    "honeypot": "Leave this field empty",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "required": "required",
+    "success": "Thank you, your message has been received.",
+    "successBody": "We will reply on WhatsApp or by phone soon.",
+    "noChannel": "Our online form is not connected yet. Please send your enquiry on WhatsApp — we have filled it in for you.",
+    "error": "Sorry, we could not send your message. Please send it on WhatsApp instead — we have filled it in for you.",
+    "rateLimited": "Too many messages from this connection. Please wait a few minutes or reach us on WhatsApp.",
+    "captchaFailed": "We could not verify that you are human. Please try again.",
+    "sendOnWhatsapp": "Send on WhatsApp",
+    "errors": {
+      "name": "Please enter your name (at least 2 characters).",
+      "phone": "Please enter a valid 10-digit Indian mobile number.",
+      "email": "Please enter a valid email address or leave it empty.",
+      "service": "Please choose a service.",
+      "eventDate": "Please enter a valid date.",
+      "message": "Please write at least 10 characters.",
+      "website": "Please leave this field empty."
+    }
+  },
+  "Footer": {
+    "description": "Wedding photography and films, functions, albums and a walk-in studio in Sitaram Nagar, Guntur.",
+    "explore": "Explore",
+    "services": "Services",
+    "contact": "Contact",
+    "legal": "Legal",
+    "follow": "Follow",
+    "rights": "© {year} Kalamkrutha Digital Studio. All rights reserved.",
+    "placeholderPhotos": "Photos shown are placeholders."
+  },
+  "Legal": {
+    "draftNotice": "Draft: this policy is a template and must be reviewed by Kalamkrutha Digital Studio before launch.",
+    "updated": "Last updated: 17 October 2026",
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        { "heading": "Who we are", "body": "Kalamkrutha Digital Studio, Opp Bharath Gas, 3/1 Line, Sitaram Nagar-Old, Guntur 522001, Andhra Pradesh. Contact: kalamkrutha@gmail.com, +91 88858 58111." },
+        { "heading": "What we collect", "body": "When you send the enquiry form we receive your name, phone number, optional email, the service you are interested in, an optional event date and your message. Our server also briefly sees your IP address to limit spam." },
+        { "heading": "How we use it", "body": "Only to reply to your enquiry and arrange your booking. We do not sell or share your details for marketing." },
+        { "heading": "Services that process it", "body": "Enquiries may be delivered to us by email through Resend and by WhatsApp through Meta’s WhatsApp Business Platform. Spam checks may use Cloudflare Turnstile. The website is hosted on Vercel." },
+        { "heading": "How long we keep it", "body": "[To be confirmed by the studio: how long enquiries are kept.]" },
+        { "heading": "Your rights", "body": "You can ask us to see, correct or delete the details you sent by writing to kalamkrutha@gmail.com." }
+      ]
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "sections": [
+        { "heading": "Using this website", "body": "This website describes the services of Kalamkrutha Digital Studio. Content may change without notice." },
+        { "heading": "Prices", "body": "Prices shown are starting prices or studio counter rates and may change. Your final quote is confirmed with you directly before booking." },
+        { "heading": "Bookings", "body": "[To be confirmed by the studio: advance payment, cancellation and delivery timelines.]" },
+        { "heading": "Photographs", "body": "Photographs on this website are currently placeholders and do not show real clients. [To be confirmed by the studio: usage rights for client photographs.]" },
+        { "heading": "Contact", "body": "Questions about these terms: kalamkrutha@gmail.com or +91 88858 58111." }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "sections": [
+        { "heading": "What we use", "body": "The website itself works without tracking cookies. Your language choice may be remembered with a small cookie." },
+        { "heading": "Analytics", "body": "If analytics is enabled, we ask for your consent before loading Google Analytics. Privacy-friendly analytics without cookies may be used without consent." },
+        { "heading": "Spam protection", "body": "The contact form may use Cloudflare Turnstile, which can set cookies needed to tell people from bots." },
+        { "heading": "Your choice", "body": "You can accept or decline analytics in the cookie banner and clear cookies in your browser settings at any time." }
+      ]
+    }
+  },
+  "Cookie": {
+    "message": "We would like to use analytics cookies to understand how visitors use this site.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "policy": "Cookie policy"
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "This page is not in the album",
+    "body": "The page may have moved, or the link may be wrong. Try one of these instead:"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "body": "Please try again. If the problem continues, reach us on WhatsApp.",
+    "retry": "Try again"
+  },
+  "Images": {
+    "hero1": "Telugu bride and groom seated at a flower-decorated wedding mandapam",
+    "hero2": "Bride in a maroon silk saree with temple jewellery and jasmine",
+    "hero3": "Bride and groom walking hand in hand through a temple corridor at golden hour",
+    "s1Talambralu": "Couple showering talambralu rice over each other during the wedding",
+    "s1Jeelakarra": "Bride and groom placing jeelakarra-bellam on each other’s heads",
+    "s1Candid": "Bride laughing with relatives during the wedding",
+    "s1Mangalsutra": "Mangalsutra being tied, close-up of hands and jewellery",
+    "s2Cover": "Couple outside a white church, bride in a white silk saree with a rose garland",
+    "s2Rings": "Couple exchanging rings at a church wedding",
+    "s2Family": "Family group photograph at the church entrance",
+    "s2Bride": "Bride in a white saree and veil in soft church light",
+    "s3Fort": "Couple at old stone hill-fort ruins at golden hour",
+    "s3River": "Couple on a small boat on the river at sunset",
+    "s3Field": "Couple walking through green paddy fields",
+    "s3Closeup": "Couple with foreheads touching in soft backlight",
+    "weddingRitual": "Wedding ritual at the mandapam",
+    "prewedding": "Couple during an outdoor pre-wedding shoot",
+    "svcTraditionalVideo": "Videographer filming a wedding ritual with a camera on a tripod",
+    "svcCinematic": "Camera operator with a gimbal following the bride",
+    "svcPostWedding": "Newly married couple on a beach at sunrise",
+    "svcFunctions": "Girl in a pattu langa voni at her half-saree ceremony with family",
+    "svcAlbum": "Printed wedding album lying open on a wooden table",
+    "svcStudioSitting": "Studio portrait of a young woman against a plain backdrop",
+    "svcPassport": "Sheet of eight passport-size photos on a studio desk"
+  }
+}
