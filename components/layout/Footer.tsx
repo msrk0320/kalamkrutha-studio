@@ -43,7 +43,7 @@ export async function Footer() {
     <footer className="mt-24 border-t border-line bg-paper-deep">
       <Container size="wide" className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.3fr]">
         <div className="max-w-xs">
-          <Link href="/" aria-label={tn("mainSite")}>
+          <Link href="/">
             <Wordmark />
           </Link>
           <p className="mt-5 text-[0.95rem] text-muted">{t("description")}</p>

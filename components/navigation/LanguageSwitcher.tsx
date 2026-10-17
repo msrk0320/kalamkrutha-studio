@@ -20,7 +20,6 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
             locale={locale}
             lang={locale}
             hrefLang={locale}
-            aria-label={locale === "en" ? "English" : undefined}
             aria-current={locale === current ? "true" : undefined}
             className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full px-2.5 text-[0.8rem] transition-opacity ${
               locale === current ? "font-semibold underline decoration-1 underline-offset-4" : "opacity-80 hover:opacity-100"

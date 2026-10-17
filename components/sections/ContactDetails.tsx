@@ -6,12 +6,12 @@ import { whatsappUrl } from "@/lib/whatsapp";
 
 function Row({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
   return (
-    <div className="flex gap-4 border-b border-line py-4 last:border-b-0">
-      <span className="mt-1 text-maroon">{icon}</span>
-      <div>
-        <dt className="text-xs font-medium uppercase tracking-[0.22em] text-muted">{label}</dt>
-        <dd className="mt-1 text-lg">{children}</dd>
-      </div>
+    <div className="relative border-b border-line py-4 pl-9 last:border-b-0">
+      <dt className="text-xs font-medium uppercase tracking-[0.22em] text-muted">
+        <span className="absolute left-0 top-5 text-maroon">{icon}</span>
+        {label}
+      </dt>
+      <dd className="mt-1 text-lg">{children}</dd>
     </div>
   );
 }
