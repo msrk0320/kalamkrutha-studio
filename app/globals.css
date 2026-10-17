@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #f5f2ed;
+  --color-paper-deep: #ece6dd;
+  --color-ink: #232323;
+  --color-muted: #5e554c;
+  --color-maroon: #7b1e2b;
+  --color-maroon-hover: #651722;
+  --color-line: #d9d1c5;
+  --color-whatsapp: #25d366;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --ease-album: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Indic scripts: swap both families; Latin fallbacks keep names/numbers consistent. */
+html:lang(te) {
+  --font-display: var(--font-telugu-serif), var(--font-cormorant), serif;
+  --font-sans: var(--font-telugu-sans), var(--font-inter), sans-serif;
+}
+html:lang(hi) {
+  --font-display: var(--font-devanagari-serif), var(--font-cormorant), serif;
+  --font-sans: var(--font-devanagari-sans), var(--font-inter), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+  html:lang(te) :is(h1, h2, h3, h4),
+  html:lang(hi) :is(h1, h2, h3, h4) {
+    line-height: 1.35;
+  }
+  ::selection {
+    background: var(--color-maroon);
+    color: var(--color-paper);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-maroon);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
