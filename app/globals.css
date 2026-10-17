@@ -26,6 +26,11 @@ html:lang(hi) {
   --font-sans: var(--font-devanagari-sans), var(--font-inter), sans-serif;
 }
 
+/* Letter-spacing splits Telugu/Devanagari conjuncts; Latin brand text opts out with lang="en". */
+html:is(:lang(te), :lang(hi)) :not([lang="en"], [lang="en"] *) {
+  letter-spacing: normal !important;
+}
+
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;

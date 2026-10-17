@@ -12,8 +12,8 @@ export function CoupleNames({
   className?: string;
 }) {
   return (
-    <Tag className={`font-display font-light leading-none ${className}`}>
-      {a} <span className="font-display italic text-maroon">&amp;</span> {b}
+    <Tag lang="en" className={`font-light leading-none [font-family:var(--font-cormorant),serif] ${className}`}>
+      {a} <span className="italic text-maroon">&amp;</span> {b}
     </Tag>
   );
 }

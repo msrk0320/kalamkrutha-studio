@@ -10,7 +10,7 @@ import { HeaderShell } from "./HeaderShell";
 /** Latin wordmark in every locale: it is the studio's brand mark. */
 export function Wordmark() {
   return (
-    <span className="flex flex-col leading-none">
+    <span lang="en" className="flex flex-col leading-none">
       <span className="text-[1.6rem] tracking-wide [font-family:var(--font-cormorant),serif]">Kalamkrutha</span>
       <span className="mt-1 text-[0.6rem] uppercase tracking-[0.34em] [font-family:var(--font-inter),sans-serif]">
         Digital Studio

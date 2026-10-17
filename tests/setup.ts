@@ -15,3 +15,8 @@ vi.mock("next/font/google", () => {
     ].map((n) => [n, font(n)]),
   );
 });
+
+import { cleanup } from "@testing-library/react";
+import { afterEach } from "vitest";
+
+afterEach(() => cleanup());
