@@ -1,0 +1,9 @@
+_source/
+_legacy/
+.superpowers/
+.playwright-mcp/
+research/
+docs/
+tests/
+playwright-report/
+test-results/
