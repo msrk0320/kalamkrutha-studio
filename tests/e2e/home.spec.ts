@@ -19,10 +19,17 @@ for (const path of ["/", "/te", "/hi"]) {
   });
 }
 
-test("home links every featured story and the WhatsApp CTA", async ({ page }) => {
+test("home links every featured story and the WhatsApp CTA", async ({ page }, testInfo) => {
   await page.goto("/");
   for (const slug of ["telugu-wedding", "church-wedding", "pre-wedding"]) {
     await expect(page.locator(`a[href="/stories/${slug}"]`).first()).toBeAttached();
   }
-  await expect(page.locator('[data-hero] a[href^="https://wa.me/918885858111"]')).toBeVisible();
+  const heroWhatsApp = page.locator('[data-hero] a[href^="https://wa.me/918885858111"]');
+  // On phones the floating WhatsApp button is the only one; in-page green buttons are hidden.
+  if (testInfo.project.name === "mobile-360") {
+    await expect(heroWhatsApp).toBeHidden();
+    await expect(page.locator('a[aria-label][href^="https://wa.me/918885858111"].fixed')).toBeVisible();
+  } else {
+    await expect(heroWhatsApp).toBeVisible();
+  }
 });

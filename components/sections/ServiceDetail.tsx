@@ -48,7 +48,7 @@ export async function ServiceDetail({ service, flip }: { service: Service; flip:
               href={whatsappUrl(`${tc("whatsappMessage")} (${title})`)}
               target="_blank"
               rel="noopener noreferrer"
-              className={buttonClasses("whatsapp")}
+              className={buttonClasses("whatsapp", "md", "max-sm:hidden")}
             >
               <WhatsAppIcon /> {tc("askOnWhatsapp")}
             </a>

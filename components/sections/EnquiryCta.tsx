@@ -30,7 +30,7 @@ export async function EnquiryCta({
             href={whatsappUrl(tc("whatsappMessage"))}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonClasses("whatsapp", "lg")}
+            className={buttonClasses("whatsapp", "lg", "max-sm:hidden")}
           >
             <WhatsAppIcon /> {tc("whatsappUs")}
           </a>
