@@ -1,0 +1,122 @@
+{
+  "hero1": {
+    "src": "/images/hero1.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "hero2": {
+    "src": "/images/hero2.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "hero3": {
+    "src": "/images/hero3.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "s1Talambralu": {
+    "src": "/images/s1-talambralu.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s1Jeelakarra": {
+    "src": "/images/s1-jeelakarra.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s1Candid": {
+    "src": "/images/s1-candid.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "s1Mangalsutra": {
+    "src": "/images/s1-mangalsutra.webp",
+    "width": 1024,
+    "height": 1024
+  },
+  "s2Cover": {
+    "src": "/images/s2-cover.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s2Rings": {
+    "src": "/images/s2-rings.webp",
+    "width": 1024,
+    "height": 1024
+  },
+  "s2Family": {
+    "src": "/images/s2-family.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "s2Bride": {
+    "src": "/images/s2-bride.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s3Fort": {
+    "src": "/images/s3-fort.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "s3River": {
+    "src": "/images/s3-river.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s3Field": {
+    "src": "/images/s3-field.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "s3Closeup": {
+    "src": "/images/s3-closeup.webp",
+    "width": 1024,
+    "height": 1024
+  },
+  "weddingRitual": {
+    "src": "/images/wedding-ritual.webp",
+    "width": 1120,
+    "height": 1400
+  },
+  "prewedding": {
+    "src": "/images/prewedding.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "svcTraditionalVideo": {
+    "src": "/images/svc-traditional-video.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "svcCinematic": {
+    "src": "/images/svc-cinematic.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "svcPostWedding": {
+    "src": "/images/svc-post-wedding.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "svcFunctions": {
+    "src": "/images/svc-functions.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "svcAlbum": {
+    "src": "/images/svc-album.webp",
+    "width": 1536,
+    "height": 1024
+  },
+  "svcStudioSitting": {
+    "src": "/images/svc-studio-sitting.webp",
+    "width": 1024,
+    "height": 1536
+  },
+  "svcPassport": {
+    "src": "/images/svc-passport.webp",
+    "width": 1024,
+    "height": 1024
+  }
+}
