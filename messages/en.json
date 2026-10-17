@@ -11,7 +11,7 @@
     },
     "story": {
       "title": "{a} & {b} – Wedding Story | Kalamkrutha Digital Studio",
-      "description": "{a} & {b}: a {kind} photographed by Kalamkrutha Digital Studio in {place}. Rituals, portraits and candid moments laid out as a wedding album you can browse."
+      "description": "{a} & {b}: a {kind} photographed by Kalamkrutha Digital Studio in {place}. Rituals, portraits and candid moments, laid out like an album."
     },
     "services": {
       "title": "Photography & Video Services, Prices | Kalamkrutha Guntur",
@@ -22,7 +22,7 @@
       "description": "Kalamkrutha Digital Studio has photographed weddings and family functions in Guntur since 2016. Visit us opposite Bharath Gas, Sitaram Nagar, 9 am to 9 pm."
     },
     "contact": {
-      "title": "Contact & Book a Shoot in Guntur | Kalamkrutha Digital Studio",
+      "title": "Contact Us & Book a Shoot in Guntur | Kalamkrutha Studio",
       "description": "Book wedding photography or video in Guntur. WhatsApp or call +91 88858 58111, email kalamkrutha@gmail.com, or send your event details through our form."
     },
     "privacy": {
@@ -131,42 +131,78 @@
       "wedding-photography": {
         "title": "Wedding Photography",
         "summary": "Complete coverage of the wedding day, from the pellikuthuru and mandapam rituals to family portraits.",
-        "includes": ["Rituals and ceremony coverage", "Couple and family portraits", "Edited high-resolution photos", "Album design and printing on request"]
+        "includes": [
+          "Rituals and ceremony coverage",
+          "Couple and family portraits",
+          "Edited high-resolution photos",
+          "Album design and printing on request"
+        ]
       },
       "traditional-videography": {
         "title": "Traditional Videography",
         "summary": "A full-function video that records the whole ceremony, ritual by ritual, for the family to keep.",
-        "includes": ["Full ceremony recorded start to finish", "Multiple camera angles where needed", "Video editing with titles and music", "Delivered on pen drive or download"]
+        "includes": [
+          "Full ceremony recorded start to finish",
+          "Multiple camera angles where needed",
+          "Video editing with titles and music",
+          "Delivered on pen drive or download"
+        ]
       },
       "candid-photography": {
         "title": "Candid Photography",
         "summary": "Unposed moments — laughter, tears and glances — caught as they happen alongside the traditional coverage.",
-        "includes": ["Dedicated candid photographer", "Natural colour editing", "Best moments selected for the album"]
+        "includes": [
+          "Dedicated candid photographer",
+          "Natural colour editing",
+          "Best moments selected for the album"
+        ]
       },
       "cinematic-videography": {
         "title": "Cinematic Videography",
         "summary": "A film-style highlight of your day with music, plus a 3–5 minute candid highlight video of the whole event.",
-        "includes": ["3–5 minute highlight film", "Cinematic camera work", "Colour grading and sound design", "Short clips for Instagram and WhatsApp"]
+        "includes": [
+          "3–5 minute highlight film",
+          "Cinematic camera work",
+          "Colour grading and sound design",
+          "Short clips for Instagram and WhatsApp"
+        ]
       },
       "pre-wedding": {
         "title": "Pre-Wedding Photography",
         "summary": "An outdoor shoot before the wedding at a location you choose — riverside, fort, fields or city streets.",
-        "includes": ["Location suggestions around Guntur", "Outfit and pose guidance", "Edited photos for invitations and social media"]
+        "includes": [
+          "Location suggestions around Guntur",
+          "Outfit and pose guidance",
+          "Edited photos for invitations and social media"
+        ]
       },
       "post-wedding": {
         "title": "Post-Wedding Photography",
         "summary": "A relaxed shoot after the wedding, once the rush is over and you can enjoy the camera together.",
-        "includes": ["Relaxed couple session", "Indoor or outdoor location", "Edited high-resolution photos"]
+        "includes": [
+          "Relaxed couple session",
+          "Indoor or outdoor location",
+          "Edited high-resolution photos"
+        ]
       },
       "functions": {
         "title": "Functions & Events",
         "summary": "Engagements, birthdays, half-saree ceremonies, naming ceremonies, newborn shoots and family events.",
-        "includes": ["Engagement from ₹12,000", "Birthday from ₹10,000", "Half-saree, naming and newborn shoots", "Photo and video coverage"]
+        "includes": [
+          "Engagement from ₹12,000",
+          "Birthday from ₹10,000",
+          "Half-saree, naming and newborn shoots",
+          "Photo and video coverage"
+        ]
       },
       "album-design": {
         "title": "Album Design & Video Editing",
         "summary": "We design, print and bind your wedding album and edit your videos in our own studio.",
-        "includes": ["Custom album layout", "Premium printed albums", "Video editing for full-function and highlight videos"]
+        "includes": [
+          "Custom album layout",
+          "Premium printed albums",
+          "Video editing for full-function and highlight videos"
+        ]
       }
     }
   },
@@ -176,11 +212,26 @@
     "intro": "Walk in any day, 9 am to 9 pm. Rates as displayed at the studio.",
     "extras": "Also available: urgent passport photos, photostat and colour xerox.",
     "items": {
-      "passport": { "title": "Passport-size photos", "detail": "8 copies" },
-      "passport-extra": { "title": "Additional passport photos", "detail": "8 more copies" },
-      "studio-sitting": { "title": "Studio sitting", "detail": "2 copies, with background change" },
-      "matching-photos": { "title": "Matching photos", "detail": "2 copies, 6×4 maxi, with background change" },
-      "digital-transfer": { "title": "WhatsApp & email transfer", "detail": "Extra, per order" }
+      "passport": {
+        "title": "Passport-size photos",
+        "detail": "8 copies"
+      },
+      "passport-extra": {
+        "title": "Additional passport photos",
+        "detail": "8 more copies"
+      },
+      "studio-sitting": {
+        "title": "Studio sitting",
+        "detail": "2 copies, with background change"
+      },
+      "matching-photos": {
+        "title": "Matching photos",
+        "detail": "2 copies, 6×4 maxi, with background change"
+      },
+      "digital-transfer": {
+        "title": "WhatsApp & email transfer",
+        "detail": "Extra, per order"
+      }
     },
     "service": "Service",
     "price": "Price"
@@ -260,31 +311,76 @@
     "privacy": {
       "title": "Privacy Policy",
       "sections": [
-        { "heading": "Who we are", "body": "Kalamkrutha Digital Studio, Opp Bharath Gas, 3/1 Line, Sitaram Nagar-Old, Guntur 522001, Andhra Pradesh. Contact: kalamkrutha@gmail.com, +91 88858 58111." },
-        { "heading": "What we collect", "body": "When you send the enquiry form we receive your name, phone number, optional email, the service you are interested in, an optional event date and your message. Our server also briefly sees your IP address to limit spam." },
-        { "heading": "How we use it", "body": "Only to reply to your enquiry and arrange your booking. We do not sell or share your details for marketing." },
-        { "heading": "Services that process it", "body": "Enquiries may be delivered to us by email through Resend and by WhatsApp through Meta’s WhatsApp Business Platform. Spam checks may use Cloudflare Turnstile. The website is hosted on Vercel." },
-        { "heading": "How long we keep it", "body": "[To be confirmed by the studio: how long enquiries are kept.]" },
-        { "heading": "Your rights", "body": "You can ask us to see, correct or delete the details you sent by writing to kalamkrutha@gmail.com." }
+        {
+          "heading": "Who we are",
+          "body": "Kalamkrutha Digital Studio, Opp Bharath Gas, 3/1 Line, Sitaram Nagar-Old, Guntur 522001, Andhra Pradesh. Contact: kalamkrutha@gmail.com, +91 88858 58111."
+        },
+        {
+          "heading": "What we collect",
+          "body": "When you send the enquiry form we receive your name, phone number, optional email, the service you are interested in, an optional event date and your message. Our server also briefly sees your IP address to limit spam."
+        },
+        {
+          "heading": "How we use it",
+          "body": "Only to reply to your enquiry and arrange your booking. We do not sell or share your details for marketing."
+        },
+        {
+          "heading": "Services that process it",
+          "body": "Enquiries may be delivered to us by email through Resend and by WhatsApp through Meta’s WhatsApp Business Platform. Spam checks may use Cloudflare Turnstile. The website is hosted on Vercel."
+        },
+        {
+          "heading": "How long we keep it",
+          "body": "[To be confirmed by the studio: how long enquiries are kept.]"
+        },
+        {
+          "heading": "Your rights",
+          "body": "You can ask us to see, correct or delete the details you sent by writing to kalamkrutha@gmail.com."
+        }
       ]
     },
     "terms": {
       "title": "Terms & Conditions",
       "sections": [
-        { "heading": "Using this website", "body": "This website describes the services of Kalamkrutha Digital Studio. Content may change without notice." },
-        { "heading": "Prices", "body": "Prices shown are starting prices or studio counter rates and may change. Your final quote is confirmed with you directly before booking." },
-        { "heading": "Bookings", "body": "[To be confirmed by the studio: advance payment, cancellation and delivery timelines.]" },
-        { "heading": "Photographs", "body": "Photographs on this website are currently placeholders and do not show real clients. [To be confirmed by the studio: usage rights for client photographs.]" },
-        { "heading": "Contact", "body": "Questions about these terms: kalamkrutha@gmail.com or +91 88858 58111." }
+        {
+          "heading": "Using this website",
+          "body": "This website describes the services of Kalamkrutha Digital Studio. Content may change without notice."
+        },
+        {
+          "heading": "Prices",
+          "body": "Prices shown are starting prices or studio counter rates and may change. Your final quote is confirmed with you directly before booking."
+        },
+        {
+          "heading": "Bookings",
+          "body": "[To be confirmed by the studio: advance payment, cancellation and delivery timelines.]"
+        },
+        {
+          "heading": "Photographs",
+          "body": "Photographs on this website are currently placeholders and do not show real clients. [To be confirmed by the studio: usage rights for client photographs.]"
+        },
+        {
+          "heading": "Contact",
+          "body": "Questions about these terms: kalamkrutha@gmail.com or +91 88858 58111."
+        }
       ]
     },
     "cookies": {
       "title": "Cookie Policy",
       "sections": [
-        { "heading": "What we use", "body": "The website itself works without tracking cookies. Your language choice may be remembered with a small cookie." },
-        { "heading": "Analytics", "body": "If analytics is enabled, we ask for your consent before loading Google Analytics. Privacy-friendly analytics without cookies may be used without consent." },
-        { "heading": "Spam protection", "body": "The contact form may use Cloudflare Turnstile, which can set cookies needed to tell people from bots." },
-        { "heading": "Your choice", "body": "You can accept or decline analytics in the cookie banner and clear cookies in your browser settings at any time." }
+        {
+          "heading": "What we use",
+          "body": "The website itself works without tracking cookies. Your language choice may be remembered with a small cookie."
+        },
+        {
+          "heading": "Analytics",
+          "body": "If analytics is enabled, we ask for your consent before loading Google Analytics. Privacy-friendly analytics without cookies may be used without consent."
+        },
+        {
+          "heading": "Spam protection",
+          "body": "The contact form may use Cloudflare Turnstile, which can set cookies needed to tell people from bots."
+        },
+        {
+          "heading": "Your choice",
+          "body": "You can accept or decline analytics in the cookie banner and clear cookies in your browser settings at any time."
+        }
       ]
     }
   },

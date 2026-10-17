@@ -11,7 +11,8 @@
     "test": "vitest run",
     "e2e": "cross-env PLAYWRIGHT_BROWSERS_PATH=C:\\Tools\\Playwright playwright test",
     "e2e:install": "cross-env PLAYWRIGHT_BROWSERS_PATH=C:\\Tools\\Playwright playwright install chromium",
-    "images": "node scripts/build-images.mjs"
+    "images": "node scripts/build-images.mjs",
+    "icons": "node scripts/build-icons.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.2",

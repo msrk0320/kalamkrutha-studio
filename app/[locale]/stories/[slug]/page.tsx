@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
+import { buildMetadata } from "@/lib/seo/metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Reveal } from "@/components/motion/Reveal";
@@ -14,6 +18,25 @@ import { getStory, stories } from "@/lib/content/stories";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => stories.map((s) => ({ locale, slug: s.slug })));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const story = getStory(slug);
+  if (!story) return {};
+  const t = await getTranslations({ locale, namespace: "Meta.story" });
+  const tk = await getTranslations({ locale, namespace: "Stories.kinds" });
+  const values = { a: story.coupleA, b: story.coupleB, place: story.place, kind: tk(story.kind) };
+  return buildMetadata({
+    locale,
+    path: `/stories/${story.slug}`,
+    title: t("title", values),
+    description: t("description", values),
+  });
 }
 
 // Album page: the cover full width, then remaining prints paired at mixed sizes.
@@ -36,8 +59,16 @@ export default async function StoryPage({ params }: { params: Promise<{ locale: 
   const cover = images[story.cover];
   const portraitCover = cover.height > cover.width;
 
+  const tnav = await getTranslations("Nav");
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd(locale, [
+          { name: tnav("home"), path: "/" },
+          { name: tnav("stories"), path: "/stories" },
+          { name: `${story.coupleA} & ${story.coupleB}`, path: `/stories/${story.slug}` },
+        ])}
+      />
       <article>
         <header className="pt-32 md:pt-44">
           <Container size="wide">

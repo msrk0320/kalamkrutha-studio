@@ -1,16 +1,34 @@
+import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { Analytics } from "@/components/analytics/Analytics";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
+import { localBusinessJsonLd, websiteJsonLd } from "@/lib/seo/jsonld";
+import { siteUrl } from "@/lib/seo/site";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl()),
+  applicationName: "Kalamkrutha Digital Studio",
+  formatDetection: { telephone: false },
+  ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
+};
+
+export const viewport: Viewport = {
+  themeColor: "#F5F2ED",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export default async function LocaleLayout({
   children,
@@ -27,6 +45,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={fontVariables(locale)}>
       <body>
+        <JsonLd data={[localBusinessJsonLd(locale), websiteJsonLd(locale)]} />
         <NextIntlClientProvider>
           <a
             href="#main"
@@ -40,6 +59,7 @@ export default async function LocaleLayout({
           </main>
           <Footer />
           <FloatingWhatsApp />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

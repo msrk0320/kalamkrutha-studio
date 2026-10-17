@@ -1,3 +1,6 @@
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { EnquiryCta } from "@/components/sections/EnquiryCta";
 import { StoryCard } from "@/components/sections/StoryCard";
@@ -6,14 +9,25 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { Locale } from "@/i18n/routing";
 import { stories } from "@/lib/content/stories";
 
+export function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
+  return pageMetadata(params, "stories", "/stories");
+}
+
 export default async function StoriesPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Stories");
   const tc = await getTranslations("Common");
 
+  const tnav = await getTranslations("Nav");
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd(locale, [
+          { name: tnav("home"), path: "/" },
+          { name: tnav("stories"), path: "/stories" },
+        ])}
+      />
       <Container size="wide" className="pb-12 pt-32 md:pt-44">
         <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
         <p className="mt-4 text-sm text-muted">{tc("sampleNotice")}</p>

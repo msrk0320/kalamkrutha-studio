@@ -1,3 +1,6 @@
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactDetails } from "@/components/sections/ContactDetails";
@@ -8,14 +11,25 @@ import { Photo } from "@/components/ui/Photo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { Locale } from "@/i18n/routing";
 
+export function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
+  return pageMetadata(params, "about", "/about");
+}
+
 export default async function AboutPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("About");
   const paragraphs = t.raw("storyBody") as string[];
 
+  const tnav = await getTranslations("Nav");
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd(locale, [
+          { name: tnav("home"), path: "/" },
+          { name: tnav("about"), path: "/about" },
+        ])}
+      />
       <Container size="wide" className="pb-16 pt-32 md:pt-44">
         <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       </Container>

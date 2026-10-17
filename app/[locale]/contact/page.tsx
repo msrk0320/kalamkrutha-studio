@@ -1,3 +1,6 @@
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/lib/seo/jsonld";
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { ContactDetails } from "@/components/sections/ContactDetails";
@@ -6,6 +9,10 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { Locale } from "@/i18n/routing";
 import { serviceOptions } from "@/lib/validations/contact";
+
+export function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
+  return pageMetadata(params, "contact", "/contact");
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
@@ -21,8 +28,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     ]),
   ) as Record<(typeof serviceOptions)[number], string>;
 
+  const tnav = await getTranslations("Nav");
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd(locale, [
+          { name: tnav("home"), path: "/" },
+          { name: tnav("contact"), path: "/contact" },
+        ])}
+      />
       <Container size="wide" className="pb-12 pt-32 md:pt-44">
         <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
       </Container>

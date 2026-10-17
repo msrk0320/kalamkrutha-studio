@@ -1,3 +1,6 @@
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbJsonLd, serviceJsonLd } from "@/lib/seo/jsonld";
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { EnquiryCta } from "@/components/sections/EnquiryCta";
 import { ServiceDetail } from "@/components/sections/ServiceDetail";
@@ -9,14 +12,26 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { Locale } from "@/i18n/routing";
 import { services, walkInImages } from "@/lib/content/services";
 
+export function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
+  return pageMetadata(params, "services", "/services");
+}
+
 export default async function ServicesPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("Services");
   const tw = await getTranslations("WalkIn");
 
+  const tnav = await getTranslations("Nav");
   return (
     <>
+      <JsonLd
+        data={breadcrumbJsonLd(locale, [
+          { name: tnav("home"), path: "/" },
+          { name: tnav("services"), path: "/services" },
+        ])}
+      />
+      <JsonLd data={services.map((s) => serviceJsonLd(s, t(`items.${s.id}.title`), locale))} />
       <Container size="wide" className="pb-16 pt-32 md:pt-44">
         <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
         <p className="mt-6 font-display text-2xl italic text-maroon">{t("functionsNote")}</p>

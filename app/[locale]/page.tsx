@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo/page-metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { AlbumSpread } from "@/components/sections/AlbumSpread";
@@ -13,6 +14,10 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { stories } from "@/lib/content/stories";
 import { whatsappUrl } from "@/lib/whatsapp";
+
+export function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }) {
+  return pageMetadata(params, "home", "/");
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
