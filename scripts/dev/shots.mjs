@@ -8,11 +8,10 @@ for (const w of widths.split(",").map(Number)) {
   const page = await ctx.newPage();
   for (const p of paths.split(",")) {
     await page.goto(base + p, { waitUntil: "load" });
-    await page.evaluate(async () => {
-      for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); }
-      window.scrollTo(0, 0);
-    });
-    await page.waitForTimeout(400);
+    const height = await page.evaluate(() => document.body.scrollHeight);
+    for (let y = 0; y < height; y += 400) { await page.mouse.wheel(0, 400); await page.waitForTimeout(120); }
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(1500);
     const name = `${outDir}/${(p.replace(/\//g, "_") || "_home")}-${w}.png`;
     await page.screenshot({ path: name, fullPage: true });
     console.log(name);
