@@ -9,20 +9,23 @@ import type { Service } from "@/lib/content/services";
 import { priceLabel } from "@/lib/format";
 import { whatsappUrl } from "@/lib/whatsapp";
 
-export async function ServiceDetail({ service, flip }: { service: Service; flip: boolean }) {
+export async function ServiceDetail({ service, flip, eager = false }: { service: Service; flip: boolean; eager?: boolean }) {
   const t = await getTranslations("Services");
   const tc = await getTranslations("Common");
   const locale = (await getLocale()) as Locale;
   const title = t(`items.${service.id}.title`);
   const includes = t.raw(`items.${service.id}.includes`) as string[];
   const price = priceLabel(service.priceFrom, locale);
+  const photoClass = `md:col-span-6 ${flip ? "md:order-2 md:col-start-7" : ""}`;
+  const photo = (
+    <Photo id={service.image} eager={eager} className="aspect-[4/3]" sizes="(min-width: 768px) 50vw, 100vw" />
+  );
 
   return (
     <section id={service.id} aria-labelledby={`${service.id}-title`} className="scroll-mt-24 border-t border-line py-16 md:py-24">
       <Container size="wide" className="grid items-center gap-10 md:grid-cols-12 md:gap-12">
-        <Reveal className={`md:col-span-6 ${flip ? "md:order-2 md:col-start-7" : ""}`}>
-          <Photo id={service.image} className="aspect-[4/3]" sizes="(min-width: 768px) 50vw, 100vw" />
-        </Reveal>
+        {/* The first photo is the page's LCP, so it is not hidden behind the reveal animation. */}
+        {eager ? <div className={photoClass}>{photo}</div> : <Reveal className={photoClass}>{photo}</Reveal>}
         <div className={`md:col-span-5 ${flip ? "md:order-1" : "md:col-start-8"}`}>
           <h2 id={`${service.id}-title`} className="text-4xl font-light md:text-5xl">
             {title}

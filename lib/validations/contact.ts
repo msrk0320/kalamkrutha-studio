@@ -1,6 +1,9 @@
 import { z } from "zod";
 import type { ServiceId, WalkInId } from "@/lib/content/services";
 
+// The CSP has no 'unsafe-eval'; without this, zod's eval probe logs a CSP violation in the browser.
+z.config({ jitless: true });
+
 export const serviceOptions = [
   "wedding-photography",
   "traditional-videography",

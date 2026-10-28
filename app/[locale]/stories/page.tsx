@@ -34,9 +34,9 @@ export default async function StoriesPage({ params }: { params: Promise<{ locale
       </Container>
       <Container size="wide">
         <ul className="grid gap-x-6 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {stories.map((story) => (
+          {stories.map((story, i) => (
             <li key={story.slug}>
-              <StoryCard story={story} />
+              <StoryCard story={story} eager={i === 0} />
             </li>
           ))}
         </ul>

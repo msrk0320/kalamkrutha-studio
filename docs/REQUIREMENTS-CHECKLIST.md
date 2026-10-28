@@ -44,10 +44,10 @@ Checked against `D:\Sunil\Website Requirements.docx` on 2026-10-17. The statuses
 
 | Item | Status | Notes |
 |---|---|---|
-| Hero image not lazy-loaded, preloaded with high fetch priority | Done | Covered by a test |
+| Hero image not lazy-loaded, preloaded with high fetch priority | Done | Covered by a test. The first photo on Services and Stories is also eager with high priority, outside the reveal animation |
 | Below-the-fold images lazy-loaded with intrinsic dimensions (no layout shift) | Done | |
 | All pages statically pre-rendered | Done | 41 static pages at build time |
-| Core Web Vitals | Not measured | Run Lighthouse or PageSpeed on the deployed preview |
+| Core Web Vitals | Lab only | Lighthouse lab numbers are in `docs/QA-SEO-REPORT.md`. There is no field data until the site is indexed and has traffic |
 
 ## Accessibility (WCAG 2.1 AA)
 
@@ -62,7 +62,7 @@ Checked against `D:\Sunil\Website Requirements.docx` on 2026-10-17. The statuses
 
 ## Responsive design
 
-No horizontal overflow at 360, 375, 390, 414, 768, 820, 1024, 1280, 1440 or 1920px, on every page in every language. **Done**, covered by the quality sweep.
+No horizontal overflow at 320×568, 360×640, 375×667, 390×844, 414×896, 430×932, 768×1024, 820×1180, 1024×768, 1280×800, 1366×768, 1440×900 or 1920×1080, or in phone landscape (667×375, 844×390, 932×430), on every page in every language. **Done**, covered by the quality sweep (emulated viewports in Chromium, not real devices).
 
 ## Lead system
 

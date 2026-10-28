@@ -38,7 +38,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       </Container>
 
       {services.map((service, i) => (
-        <ServiceDetail key={service.id} service={service} flip={i % 2 === 1} />
+        <ServiceDetail key={service.id} service={service} flip={i % 2 === 1} eager={i === 0} />
       ))}
 
       <section id="walk-in" aria-labelledby="walk-in-title" className="scroll-mt-24 bg-paper-deep py-16 md:py-24">

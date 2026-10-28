@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
 
 export const albumEase = [0.19, 1, 0.22, 1] as const;
@@ -20,14 +20,16 @@ export function Reveal({
 }) {
   const reduce = useReducedMotion();
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={reduce ? { duration: 0 } : { duration: 0.9, ease: albumEase, delay }}
-    >
-      {children}
-    </motion.div>
+    <LazyMotion features={domAnimation} strict>
+      <m.div
+        className={className}
+        initial={{ opacity: 0, y }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+        transition={reduce ? { duration: 0 } : { duration: 0.9, ease: albumEase, delay }}
+      >
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 }

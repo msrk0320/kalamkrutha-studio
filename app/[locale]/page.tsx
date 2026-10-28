@@ -30,8 +30,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
     <>
       <HeroSlideshow slides={["hero1", "hero2", "hero3"]}>
         <div className="max-w-2xl">
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/85">{t("eyebrow")}</p>
-          <h1 className="mt-4 text-[clamp(3rem,10vw,7.5rem)] font-light leading-[0.95]">{t("title")}</h1>
+          {/* The h1 carries the searchable phrase; the large tagline stays the visual headline. */}
+          <h1 className="font-sans text-xs font-medium uppercase leading-[1.6] tracking-[0.3em] text-white/85">{t("eyebrow")}</h1>
+          <p className="mt-4 text-balance font-display text-[clamp(3rem,10vw,7.5rem)] font-light leading-[0.95]">{t("title")}</p>
           <p className="mt-6 max-w-xl text-lg text-white/90 md:text-xl">{t("subtitle")}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a

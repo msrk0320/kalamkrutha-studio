@@ -27,6 +27,7 @@ export async function Photo({
         height={img.height}
         sizes={sizes}
         loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : undefined}
         className={`h-full w-full object-cover transition-transform duration-700 ease-[var(--ease-album)] ${imgClassName}`}
       />
     </div>

@@ -19,7 +19,12 @@ const paths = [
   "/cookie-policy",
 ];
 const locales = ["", "/te", "/hi"];
-const widths = [360, 375, 390, 414, 768, 820, 1024, 1280, 1440, 1920];
+// The QA brief's device matrix, plus phone landscape.
+const viewports = [
+  [320, 568], [360, 640], [375, 667], [390, 844], [414, 896], [430, 932],
+  [667, 375], [844, 390], [932, 430],
+  [768, 1024], [820, 1180], [1024, 768], [1280, 800], [1366, 768], [1440, 900], [1920, 1080],
+] as const;
 
 async function headingProblems(page: Page) {
   return page.evaluate(() => {
@@ -59,10 +64,10 @@ for (const locale of locales) {
         );
       expect(missingAlt, "images without alt").toEqual([]);
 
-      for (const width of widths) {
-        await page.setViewportSize({ width, height: width < 600 ? 800 : 900 });
+      for (const [width, height] of viewports) {
+        await page.setViewportSize({ width, height });
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
-        expect(overflow, `horizontal overflow at ${width}px`).toBeLessThanOrEqual(0);
+        expect(overflow, `horizontal overflow at ${width}×${height}`).toBeLessThanOrEqual(0);
       }
 
       for (const width of [360, 1440]) {

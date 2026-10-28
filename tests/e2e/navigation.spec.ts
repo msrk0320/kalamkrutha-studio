@@ -25,6 +25,12 @@ test("language switcher keeps the current page", async ({ page, viewport }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "te");
 });
 
+test("/en URLs redirect permanently to the unprefixed URL", async ({ request }) => {
+  const res = await request.get("/en/services", { maxRedirects: 0 });
+  expect(res.status()).toBe(308);
+  expect(res.headers()["location"]).toMatch(/\/services$/);
+});
+
 test("skip link moves focus to main content", async ({ page }) => {
   await page.goto("/");
   await page.keyboard.press("Tab");

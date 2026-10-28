@@ -21,6 +21,16 @@ test("services page has a section for every service and the walk-in rates", asyn
   await expect(page.locator("section#wedding-photography")).toContainText("₹25,000");
 });
 
+for (const path of ["/services", "/stories"]) {
+  test(`${path}: the first photograph (the LCP) loads eagerly with high priority`, async ({ page }) => {
+    await page.goto(path);
+    const first = page.locator("main img").first();
+    await expect(first).toHaveAttribute("loading", "eager");
+    await expect(first).toHaveAttribute("fetchpriority", "high");
+    await expect(page.locator('main img[loading="lazy"]').first()).toBeAttached();
+  });
+}
+
 for (const locale of ["", "/te", "/hi"]) {
   for (const path of ["/about", "/contact"]) {
     test(`${locale}${path} has one h1 and the studio address`, async ({ page }) => {
