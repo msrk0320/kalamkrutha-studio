@@ -2,7 +2,7 @@
 
 This is the album-style website for Kalamkrutha Digital Studio in Guntur, available in English, Telugu (`/te`) and Hindi (`/hi`).
 
-It is built with Next.js 16 (App Router), TypeScript, Tailwind CSS 4, next-intl, Framer Motion, Embla Carousel, React Hook Form + Zod, and Resend.
+It is built with Next.js 16 (App Router), TypeScript, Tailwind CSS 4, next-intl, Framer Motion, animejs, Swiper, Lenis, React Hook Form + Zod, and Resend.
 
 - Design spec: `docs/superpowers/specs/2026-10-17-kalamkrutha-album-site-design.md`
 - Requirements status: `docs/REQUIREMENTS-CHECKLIST.md`

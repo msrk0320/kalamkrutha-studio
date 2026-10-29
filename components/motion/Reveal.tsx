@@ -1,12 +1,12 @@
 "use client";
 
-import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { animate, cubicBezier } from "animejs";
+import { useEffect, useRef, type ReactNode } from "react";
 
-export const albumEase = [0.19, 1, 0.22, 1] as const;
+const albumEase = cubicBezier(0.19, 1, 0.22, 1);
 
-// Always render the same element on server and client (a different element would leave the
-// server's hidden styles in place after hydration); reduced motion only removes the movement.
+// Server and client render the same hidden element; the effect reveals it on scroll,
+// or at once when the visitor prefers reduced motion.
 export function Reveal({
   children,
   delay = 0,
@@ -18,18 +18,31 @@ export function Reveal({
   y?: number;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        io.disconnect();
+        animate(el, { opacity: [0, 1], translateY: [y, 0], duration: 900, delay: delay * 1000, ease: albumEase });
+      },
+      { rootMargin: "0px 0px -10% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [delay, y]);
+
   return (
-    <LazyMotion features={domAnimation} strict>
-      <m.div
-        className={className}
-        initial={{ opacity: 0, y }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-        transition={reduce ? { duration: 0 } : { duration: 0.9, ease: albumEase, delay }}
-      >
-        {children}
-      </m.div>
-    </LazyMotion>
+    <div ref={ref} className={className} style={{ opacity: 0, transform: `translateY(${y}px)` }}>
+      {children}
+    </div>
   );
 }

@@ -15,6 +15,22 @@ test.describe("mobile menu", () => {
     await expect(dialog).toBeHidden();
     await expect(toggle).toBeFocused();
   });
+
+  test("smooth scroll leaves the page still while the menu is open", async ({ page }) => {
+    await page.goto("/services");
+    await page.getByRole("button", { name: "Open navigation menu" }).click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+    await page.mouse.wheel(0, 800);
+    await page.waitForTimeout(600);
+    expect(await page.evaluate(() => window.scrollY)).toBe(0);
+  });
+});
+
+test("smooth scroll still scrolls the page", async ({ page }) => {
+  await page.goto("/services");
+  await page.mouse.move(100, 400);
+  await page.mouse.wheel(0, 800);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(0);
 });
 
 test("language switcher keeps the current page", async ({ page, viewport }) => {

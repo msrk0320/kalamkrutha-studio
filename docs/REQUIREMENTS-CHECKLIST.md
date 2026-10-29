@@ -17,7 +17,14 @@ Checked against `D:\Sunil\Website Requirements.docx` on 2026-10-17. The statuses
 | Server Actions | Done | `app/actions/contact.ts` |
 | React Hook Form + Zod | Done | One shared schema in `lib/validations/contact.ts`, used on both client and server |
 | next/image, next/font | Done | All photos use `next/image` with AVIF/WebP; all fonts use `next/font`, and Indic fonts are not preloaded on English pages |
-| Framer Motion and a slider library | Done | These were asked for by the owner. framer-motion handles reveals and the hero crossfade; Embla Carousel powers the story film strip |
+| Framer Motion, animejs, SwiperJS, Lenis | Done | Per the 2026-10 requirements doc: framer-motion runs the hero crossfade, animejs the scroll reveals, Swiper the story film strip, and Lenis smooth scrolling. Lenis is off under `prefers-reduced-motion` and paused while the mobile menu is open (covered by a test) |
+
+## Not yet built (parked by the owner on 2026-10-29)
+
+| Requirement | Status |
+|---|---|
+| Blog and News pages | Parked, to be built together with the CMS |
+| Blog/News admin dashboard and CMS | Parked. Vercel has no writable filesystem, so it needs an external service (e.g. Sanity) and an account the owner creates |
 
 ## Pages
 

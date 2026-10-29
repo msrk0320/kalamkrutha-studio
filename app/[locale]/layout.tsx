@@ -8,6 +8,7 @@ import { CookieBanner } from "@/components/layout/CookieBanner";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { SmoothScroll } from "@/components/motion/SmoothScroll";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { routing } from "@/i18n/routing";
 import { fontVariables } from "@/lib/fonts";
@@ -62,6 +63,7 @@ export default async function LocaleLayout({
           <FloatingWhatsApp />
           <CookieBanner />
           <Analytics />
+          <SmoothScroll />
         </NextIntlClientProvider>
       </body>
     </html>
