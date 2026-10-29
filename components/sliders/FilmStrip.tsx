@@ -1,6 +1,5 @@
 "use client";
 
-import { useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState, type KeyboardEvent } from "react";
@@ -15,7 +14,6 @@ import { images, type ImageKey } from "@/lib/content/images";
 export function FilmStrip({ slides, label }: { slides: ImageKey[]; label: string }) {
   const t = useTranslations("Stories");
   const alt = useTranslations("Images");
-  const reduce = useReducedMotion() ?? false;
   const [main, setMain] = useState<SwiperInstance | null>(null);
   const [thumbs, setThumbs] = useState<SwiperInstance | null>(null);
   const [selected, setSelected] = useState(0);
@@ -34,7 +32,8 @@ export function FilmStrip({ slides, label }: { slides: ImageKey[]; label: string
 
   return (
     <section aria-roledescription="carousel" aria-label={label} onKeyDown={onKeyDown} className="select-none">
-      <Swiper onSwiper={setMain} onSlideChange={onSlideChange} speed={reduce ? 0 : 500} className="bg-ink">
+      {/* Reduced motion: the global transition-duration override in globals.css makes slide changes instant. */}
+      <Swiper onSwiper={setMain} onSlideChange={onSlideChange} speed={500} className="bg-ink">
         {slides.map((key, i) => {
           const img = images[key];
           return (
@@ -89,14 +88,14 @@ export function FilmStrip({ slides, label }: { slides: ImageKey[]; label: string
           onSwiper={setThumbs}
           modules={[FreeMode]}
           freeMode
-          slidesPerView={4.5}
+          slidesPerView="auto"
           spaceBetween={8}
-          breakpoints={{ 640: { slidesPerView: 7 } }}
         >
           {slides.map((key, i) => {
             const img = images[key];
             return (
-              <SwiperSlide key={key}>
+              // Widths in CSS, not Swiper options, so the strip has its final size before hydration.
+              <SwiperSlide key={key} className="!w-[22%] sm:!w-[14%]">
                 <button
                   type="button"
                   onClick={() => main?.slideTo(i)}

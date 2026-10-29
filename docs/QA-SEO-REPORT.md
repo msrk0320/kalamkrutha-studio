@@ -67,6 +67,21 @@ Desktop scores are 98–100 on both builds. Best Practices on `/contact` went fr
 
 Simulated mobile scores barely move because Lighthouse estimates them from a model rather than measuring them. A real-throttled trace shows the home and contact text painting at FCP, so the simulated text LCP on those pages is an estimate, not a real delay, and that code was left alone.
 
+### After the library change (Swiper, animejs, Lenis), 2026-10-29
+
+Same method: local `next start`, simulated throttling, mobile, median of 3 runs. "Before" is the Updated column above (commit `24d9fad`).
+
+| Page | Before (P / LCP) | After (P / LCP) | TBT | CLS |
+|---|---|---|---|---|
+| `/` | 81 / 4.87 s | 81 / 4.89 s | 13 ms | 0 |
+| `/services` | 82 / 4.73 s | 83 / 4.59 s | 14 ms | 0 |
+| `/stories` | 89 / 3.77 s | 91 / 3.54 s | 14 ms | 0 |
+| `/stories/telugu-wedding` | not measured | 88 / 3.99 s | 14 ms | 0 |
+| `/contact` | 91 / 3.46 s | 92 / 3.31 s | 14 ms | 0 |
+
+No regression. The differences are within run-to-run noise.
+
+
 The same results are on a dashboard: https://claude.ai/artifact/5869TrbSfwmZ2HTNbC9b3x
 
 ## Not changed, and why
